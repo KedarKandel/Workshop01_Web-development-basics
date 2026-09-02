@@ -1,0 +1,457 @@
+/* 
+  Root leve styles
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #1f2329;
+  color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Navigation */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: #181b20;
+  border-bottom: 1px solid #343a42;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #c7cbd1;
+  font-size: 0.95rem;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #ffffff;
+}
+
+
+/* main content*/
+
+.main-content {
+  width: 100%;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.section-container,
+.profile-container {
+  width: min(100% - 3rem, 1000px);
+  margin: 0 auto;
+}
+
+
+/* profile section*/
+
+.profile-section {
+  padding: 7rem 0;
+  background-color: #1f2329;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 4px solid #343a42;
+
+  margin: 0 auto;
+}
+
+.profile-label {
+  color: #5da9ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.5rem;
+}
+
+.profile-name {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.profile-title {
+  color: #c7cbd1;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-description {
+  max-width: 650px;
+  color: #d7d9dd;
+  font-size: 1.05rem;
+}
+
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+
+  padding: 0.7rem 1.25rem;
+  margin-top: 1.5rem;
+
+  border-radius: 6px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* common used styles */
+
+.education-section,
+.experience-section,
+.contact-section {
+  padding: 5rem 0;
+}
+
+.education-section {
+  background-color: #242930;
+}
+
+.experience-section {
+  background-color: #1f2329;
+}
+
+.contact-section {
+  background-color: #242930;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+
+  display: block;
+  width: 45px;
+  height: 3px;
+
+  margin-top: 0.75rem;
+
+  background-color: #2563eb;
+}
+
+
+/* Education & Experience */
+
+.education-list,
+.experience-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.education-item,
+.experience-item {
+  padding: 1.5rem;
+
+  background-color: #1b1e23;
+  border: 1px solid #343a42;
+  border-radius: 8px;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.education-item:hover,
+.experience-item:hover {
+  border-color: #4b5563;
+  transform: translateY(-2px);
+}
+
+.education-degree,
+.experience-role {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.education-school,
+.experience-company {
+  color: #5da9ff;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.education-period,
+.experience-period {
+  color: #9299a3;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.education-description,
+.experience-description {
+  color: #c7cbd1;
+}
+
+
+/* contact */
+
+.contact-intro {
+  color: #c7cbd1;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 700px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+
+  color: #f5f5f5;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+
+  padding: 0.8rem 1rem;
+
+  background-color: #1b1e23;
+  color: #ffffff;
+
+  border: 1px solid #3a414a;
+  border-radius: 6px;
+
+  font: inherit;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #747b85;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-submit {
+  padding: 0.75rem 1.4rem;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  font: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-submit:hover,
+.form-submit:focus-visible {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+.form-status {
+  margin-top: 1rem;
+  color: #5da9ff;
+}
+
+
+/* footer */
+
+.site-footer {
+  padding: 2rem 1.5rem;
+
+  background-color: #181b20;
+  border-top: 1px solid #343a42;
+
+  text-align: center;
+}
+
+.footer-text {
+  color: #9299a3;
+  font-size: 0.9rem;
+}
+
+
+/* responsive */
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-section {
+    padding: 5rem 0;
+  }
+
+  .profile-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-description {
+    margin: 0 auto;
+  }
+
+  .section-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .education-section,
+  .experience-section,
+  .contact-section {
+    padding: 4rem 0;
+  }
+}
+
+
+
+  /*Form Status Messages*/
+
+.form-status {
+  min-height: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-status-success {
+  color: #4ade80;
+}
+
+.form-status-error {
+  color: #f87171;
+}
