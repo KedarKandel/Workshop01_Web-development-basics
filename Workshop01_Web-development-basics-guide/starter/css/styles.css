@@ -32,14 +32,7 @@ img {
 
 /* Navigation */
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 
-  background-color: #181b20;
-  border-bottom: 1px solid #343a42;
-}
 
 .navbar {
   max-width: 1100px;
